@@ -1,6 +1,6 @@
 #!/bin/bash
+#naam bin specify
+mkdir $1/Afbeeldingen #Map aanmaken met 1e argument
 
-mkdir $1/Afbeeldingen
-
-find $1 -name '*.jpg' -exec mv {} $1/Afbeeldingen \;
+find $1 -name '*.jpg' -exec mv {} $1/Afbeeldingen \; #Zoek .png en .jpg files en moves ze naar 1e argument+afbeeldingen
 find $1 -name '*.png' -exec mv {} $1/Afbeeldingen \;
