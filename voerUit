@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+type_file = $1 | grep -o '...$'
+
+case type_file in
+
+	.py)
+		python $1
+		;;
+	.sh)
+		bash $1
+		;;
+	.cc)
+		cat $1
+		;;
+	*)
+		echo "No executable file type"
+		;;
+esac
+
+foo || bar
