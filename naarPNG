@@ -1,8 +1,8 @@
 #! /bin/bash 
-cd $1
+cd $1 #veranderd naar de map waar de afbeeldingen in zitten
 
-for img in *.jpg; do
-	filename=${img%.*}
-	convert $filename.jpg $filename.png
-	convert $filename.png -resize 128x128 $filename.png
+for img in *.jpg; do #for elk bestand in de map met .jpg
+	filename=${img%.*} #naam van elke image
+	convert $filename.jpg $filename.png #convert naar .png
+	convert $filename.png -resize 128x128 $filename.png #Resize naar 128x128
 done
