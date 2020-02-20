@@ -1,21 +1,20 @@
-#!/usr/bin/env bash
+#! /bin/bash
 
-type_file = $1 | grep -o '...$'
+filename=$1;
+TYPE="${filename##*.}";
+case $TYPE in
 
-case type_file in
-
-	.py)
-		python $1
+	py)
+		python3 $filename
 		;;
-	.sh)
-		bash $1
+	sh)
+		bash $filename
 		;;
-	.cc)
-		cat $1
+	cc)
+		cat $filename
 		;;
 	*)
 		echo "No executable file type"
 		;;
 esac
 
-foo || bar
